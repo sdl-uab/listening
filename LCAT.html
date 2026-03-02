@@ -39,14 +39,28 @@
         }
 
         .header {
-            text-align: center;
+            position: relative;
             margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .header img {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 80px;
         }
 
         .header h2 {
             color: var(--primary-color);
-            margin: 0 0 10px 0;
+            margin: 0;
             font-size: 1.75rem;
+        }
+
+        .header p {
+            color: #666;
+            margin: 10px 0 0 0;
         }
 
         .progress-container {
@@ -210,8 +224,11 @@
 <div class="quiz-container">
     <div id="quiz-ui">
         <div class="header">
-            <h2>Comprensió oral</h2>
-            <p id="question-counter" style="color: #666; margin: 0;">Question 1 of 14</p>
+            <div class="header-top">
+                <img src="logo.png" alt="Logo">
+                <h2>Comprensió oral</h2>
+            </div>
+            <p id="question-counter">Question 1 of 14</p>
         </div>
 
         <div class="progress-container">
@@ -219,7 +236,6 @@
         </div>
 
         <div id="question-container">
-            <!-- Questions will be rendered here -->
         </div>
 
         <div class="navigation">
